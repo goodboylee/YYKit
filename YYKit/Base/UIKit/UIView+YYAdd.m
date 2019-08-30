@@ -79,6 +79,7 @@ YYSYNTH_DUMMY_CLASS(UIView_YYAdd)
             return (UIViewController *)nextResponder;
         }
     }
+    //2019-8-30 lotus modify return value from nil to current value below.
     return [[UIApplication sharedApplication].keyWindow.rootViewController yy_topPresentedViewContrller];
 }
 
