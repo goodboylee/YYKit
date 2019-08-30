@@ -12,6 +12,7 @@
 #import "UIView+YYAdd.h"
 #import <QuartzCore/QuartzCore.h>
 #import "YYKitMacro.h"
+#import "UIViewController+YYAdd.h"
 
 YYSYNTH_DUMMY_CLASS(UIView_YYAdd)
 
@@ -78,7 +79,7 @@ YYSYNTH_DUMMY_CLASS(UIView_YYAdd)
             return (UIViewController *)nextResponder;
         }
     }
-    return nil;
+    return [[UIApplication sharedApplication].keyWindow.rootViewController yy_topPresentedViewContrller];
 }
 
 - (CGFloat)visibleAlpha {
